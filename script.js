@@ -57,4 +57,13 @@ const examPasscode = 'exam2024'; // Define the passcode here
 
 
 
-
+  function unlockExam() {
+        const enteredPasscode = document.getElementById('passcode').value;
+        if (enteredPasscode === examPasscode) {
+            document.getElementById('examSection').classList.remove('hidden');
+            document.getElementById('passcodeSection').classList.add('hidden');
+            startExam();
+        } else {
+            alert('Incorrect passcode. Please try again.');
+        }
+  }
