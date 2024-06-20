@@ -4,12 +4,10 @@ const examPasscode = 'exam2024'; // Define the passcode here
         let duration = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
         setTimeout(submitExam, duration);
     }
-
-    function submitExam() {
+function submitExam() {
         document.getElementById('examForm').submit();
     }
-
-    function handleSubmit(event) {
+function handleSubmit(event) {
         event.preventDefault();
         const form = document.getElementById('examForm');
         const formData = new FormData(form);
@@ -53,17 +51,3 @@ const examPasscode = 'exam2024'; // Define the passcode here
         }
     }
 
-
-
-
-
-  function unlockExam() {
-        const enteredPasscode = document.getElementById('passcode').value;
-        if (enteredPasscode === examPasscode) {
-            document.getElementById('examSection').classList.remove('hidden');
-            document.getElementById('passcodeSection').classList.add('hidden');
-            startExam();
-        } else {
-            alert('Incorrect passcode. Please try again.');
-        }
-  }
